@@ -23,7 +23,7 @@ COPY . .
 
 # Compila la aplicación NestJS para producción
 # Esto ejecutará 'npm run build' que generará la carpeta 'dist/'
-RUN npx nest build
+RUN /app/node_modules/.bin/nest build
 
 # Expone el puerto que usa tu aplicación NestJS
 # Render lo usará, aunque la aplicación NestJS escuchará en process.env.PORT
