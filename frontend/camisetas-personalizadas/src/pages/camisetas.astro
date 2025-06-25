@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Importa el componente React que creamos
+import EditorCamiseta from '../components/EditorCamiseta/EditorCamiseta.jsx'; 
+---
+
+<BaseLayout title="Diseña Tu Camiseta - Editor Online" description="Personaliza tu camiseta con tus propias imágenes y textos.">
+    <section class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold text-center mb-6">Diseña Tu Camiseta</h1>
+        <p class="text-center text-lg mb-8">Sube tu imagen, arrastra y suelta para crear tu diseño único.</p>
+
+        {/* Aquí es donde se renderiza el componente React de tu editor */}
+        {/* La directiva client:load es crucial para que el JS se ejecute en el navegador */}
+        <EditorCamiseta client:load /> 
+    </section>
+</BaseLayout>
+
+<style>
+    /* Estilos específicos para esta página si son necesarios más allá de Tailwind */
+    /* .container ya viene de Tailwind: mx-auto py-8 */
+    /* Puedes añadir más estilos aquí si no los encuentras en Tailwind */
+</style>
