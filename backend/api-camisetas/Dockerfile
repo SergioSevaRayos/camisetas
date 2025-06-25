@@ -21,6 +21,7 @@ RUN npm install --frozen-lockfile
 # Copia el resto del código de la aplicación
 COPY . .
 
+RUN chmod +x /app/node_modules/.bin/nest
 # Compila la aplicación NestJS para producción
 # Esto ejecutará 'npm run build' que generará la carpeta 'dist/'
 RUN /app/node_modules/.bin/nest build
